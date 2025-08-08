@@ -19,21 +19,26 @@ body {
   align-items: center;
   position: relative;
   overflow: hidden;
-  margin-left: 40px;
-  margin-right: 40px;
+            /* fill its parent (viewport or section) */
+  max-width: 100%;
+ margin: 30px 33px 110px 39px;
 }
 
 .carousel-track-wrapper {
   overflow: hidden;
+  width: 100%; 
 }
 
 .carousel-track {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  will-change: transform;
 }
 
 .card {
-  flex: 0 0 295px;
+  flex: 0 0 296px;          /* Each card takes up 25% of the wrapper’s width */
+  min-width: 296px;       /* But never shrink below your design width */
+  box-sizing: border-box; /* Include margins and padding */
   margin: 0 10px;
   height:430px;
   border-radius: 12px;
